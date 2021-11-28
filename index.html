@@ -71,6 +71,7 @@
 	</header>
     <main>
 		<header><h3 id="greeting">Add main (related) contents here.</h3></header>
+		<h3>Its going to be a good <span id="day">PUT DAY HERE</span>!</h3>
 		<p>This HTML5 Flexible template could be a good starting point for some of your projects.  The template file starts by setting a background color on the HTML element, and setting max-width on the body, which is styled like a wrapper.  The BODY element is also set to a percentage width so it leaves a bit of HTML color until it shrinks in size toward the mobile view.</p>
 		<p>There is an image with a class of FLEXIBLE which is set to a max-width equal to the size of the image.  Simutaneously the class sets the image to a percentage width, allowing the image to flex in size.  The height is not changed, as this would skew the image.</p>
 		<p>The LIST elements inside the NAV are displayed inline by setting the display to be inline-block.  Bullets are removed by setting the UL to display</p>
@@ -93,13 +94,27 @@
 		let myPic = "";
 		let myDate = new Date();
 		
+		// Gets the name of the day
+		const d = new Date();
+		const weekday = new Array(7);
+		weekday[0] = "Sunday";
+		weekday[1] = "Monday";
+		weekday[2] = "Tuesday";
+		weekday[3] = "Wednesday";
+		weekday[4] = "Thursday";
+		weekday[5] = "Friday";
+		weekday[6] = "Saturday";
+		let myDay = weekday[d.getDay()];
+		// displays name of day
+		document.getElementById("day").innerHTML = myDay;
+
+
+		
 		//create dynamic copyright in footer
 		let myYear = myDate.getFullYear();
 		document.getElementById("copyright").innerHTML = myYear;
 
 		console.log(myYear);
-
-
 
 		let myHour = myDate.getHours();
 
