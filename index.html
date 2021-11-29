@@ -120,16 +120,26 @@
 
 		console.log(myHour);
 
-		if(myHour >= 12) {
-			//alert("Good Afternoon");
-			myGreeting = "Good Afternoon!"
-			myColor = "yellow";
-			myPic = "afternoon.jpg";
-		}else{
+		if(myHour >= 5 && myHour < 12) {
 			//alert("Good Morning");
 			myGreeting = "Good Morning!"
-			myColor = "orange";
+			myColor = "yellow";
 			myPic = "morning.jpg";
+		}else if (myHour >= 12 && myHour < 18) {
+			//alert("Good Afternoon");
+			myGreeting = "Good Afternoon!"
+			myColor = "orange";
+			myPic = "afternoon.jpg";
+		}else if (myHour >= 18 && myHour < 23) {
+			//alert("evening");
+			myGreeting = "Good Evening!"
+			myColor = "blue";
+			myPic = "evening.jpg";
+		}else{
+			//alert("night");
+			myGreeting = "Good Night!"
+			myColor = "black";
+			myPic = "night.jpg";
 		}
 
 		myPic = "images/" + myPic;
